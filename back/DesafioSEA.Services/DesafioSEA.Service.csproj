@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commom\" />
-    <Folder Include="User\" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DesafioSAE.Data\DesafioSEA.Data.csproj" />
+    <ProjectReference Include="..\DesafioSEA.Domain\DesafioSEA.Domain.csproj" />
   </ItemGroup>
 
 </Project>

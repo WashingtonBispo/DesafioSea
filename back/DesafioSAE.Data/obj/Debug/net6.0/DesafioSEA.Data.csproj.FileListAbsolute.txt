@@ -1,0 +1,17 @@
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\bin\Debug\net6.0\DesafioSEA.Data.deps.json
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\bin\Debug\net6.0\DesafioSEA.Data.runtimeconfig.json
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\bin\Debug\net6.0\DesafioSEA.Data.dll
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\bin\Debug\net6.0\DesafioSEA.Data.pdb
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\bin\Debug\net6.0\DesafioSEA.Domain.dll
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\bin\Debug\net6.0\DesafioSEA.Domain.pdb
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\obj\Debug\net6.0\DesafioSEA.Data.csproj.AssemblyReference.cache
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\obj\Debug\net6.0\DesafioSEA.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\obj\Debug\net6.0\DesafioSEA.Data.AssemblyInfoInputs.cache
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\obj\Debug\net6.0\DesafioSEA.Data.AssemblyInfo.cs
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\obj\Debug\net6.0\DesafioSEA.Data.csproj.CoreCompileInputs.cache
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\obj\Debug\net6.0\DesafioSEA.Data.csproj.CopyComplete
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\obj\Debug\net6.0\DesafioSEA.Data.dll
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\obj\Debug\net6.0\refint\DesafioSEA.Data.dll
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\obj\Debug\net6.0\DesafioSEA.Data.pdb
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\obj\Debug\net6.0\DesafioSEA.Data.genruntimeconfig.cache
+C:\Users\Cocotadez\Desktop\DesafioSea\back\DesafioSAE.Data\obj\Debug\net6.0\ref\DesafioSEA.Data.dll

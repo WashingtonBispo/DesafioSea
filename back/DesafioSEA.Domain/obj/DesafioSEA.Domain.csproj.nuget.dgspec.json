@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cocotadez\\Downloads\\DesafioSAE\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj": {}
+    "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cocotadez\\Downloads\\DesafioSAE\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj": {
+    "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cocotadez\\Downloads\\DesafioSAE\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj",
         "projectName": "DesafioSEA.Domain",
-        "projectPath": "C:\\Users\\Cocotadez\\Downloads\\DesafioSAE\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj",
+        "projectPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj",
         "packagesPath": "C:\\Users\\Cocotadez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cocotadez\\Downloads\\DesafioSAE\\DesafioSEA.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Cocotadez\\AppData\\Roaming\\NuGet\\NuGet.Config",

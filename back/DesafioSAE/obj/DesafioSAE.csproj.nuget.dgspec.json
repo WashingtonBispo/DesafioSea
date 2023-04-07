@@ -1,17 +1,208 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cocotadez\\Downloads\\DesafioSAE\\DesafioSAE\\DesafioSAE.csproj": {}
+    "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE\\DesafioSAE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cocotadez\\Downloads\\DesafioSAE\\DesafioSAE\\DesafioSAE.csproj": {
+    "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE.Data\\DesafioSEA.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cocotadez\\Downloads\\DesafioSAE\\DesafioSAE\\DesafioSAE.csproj",
-        "projectName": "DesafioSAE",
-        "projectPath": "C:\\Users\\Cocotadez\\Downloads\\DesafioSAE\\DesafioSAE\\DesafioSAE.csproj",
+        "projectUniqueName": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE.Data\\DesafioSEA.Data.csproj",
+        "projectName": "DesafioSEA.Data",
+        "projectPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE.Data\\DesafioSEA.Data.csproj",
         "packagesPath": "C:\\Users\\Cocotadez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cocotadez\\Downloads\\DesafioSAE\\DesafioSAE\\obj\\",
+        "outputPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cocotadez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj": {
+                "projectPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "ExpressiveAnnotations": {
+              "target": "Package",
+              "version": "[2.9.6, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE\\DesafioSAE.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE\\DesafioSAE.csproj",
+        "projectName": "DesafioSAE",
+        "projectPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE\\DesafioSAE.csproj",
+        "packagesPath": "C:\\Users\\Cocotadez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cocotadez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE.Data\\DesafioSEA.Data.csproj": {
+                "projectPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE.Data\\DesafioSEA.Data.csproj"
+              },
+              "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj": {
+                "projectPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj"
+              },
+              "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Services\\DesafioSEA.Service.csproj": {
+                "projectPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Services\\DesafioSEA.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj",
+        "projectName": "DesafioSEA.Domain",
+        "projectPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj",
+        "packagesPath": "C:\\Users\\Cocotadez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Cocotadez\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,10 +230,75 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Services\\DesafioSEA.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Services\\DesafioSEA.Service.csproj",
+        "projectName": "DesafioSEA.Service",
+        "projectPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Services\\DesafioSEA.Service.csproj",
+        "packagesPath": "C:\\Users\\Cocotadez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cocotadez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE.Data\\DesafioSEA.Data.csproj": {
+                "projectPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSAE.Data\\DesafioSEA.Data.csproj"
+              },
+              "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj": {
+                "projectPath": "C:\\Users\\Cocotadez\\Desktop\\DesafioSea\\back\\DesafioSEA.Domain\\DesafioSEA.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
-            "Swashbuckle.AspNetCore": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.15, )"
             }
           },
           "imports": [
@@ -56,9 +312,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
