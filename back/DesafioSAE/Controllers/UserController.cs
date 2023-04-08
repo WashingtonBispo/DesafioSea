@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using DesafioSEA.Service.User.Handle;
 using DesafioSEA.Service.User.Response;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace DesafioSAE.Controllers
 {
@@ -21,7 +20,6 @@ namespace DesafioSAE.Controllers
             _configuration = configuration;
         }
 
-        // GET api/<UserController>/5
         [HttpGet]
         public async Task<UserResponse> Get([FromQuery] UserGetRequest request)
         {
@@ -36,13 +34,13 @@ namespace DesafioSAE.Controllers
             return  await UserPostHandle.Handle();
         }
 
-        // PUT api/<UserController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public async Task<UserResponse> Put([FromBody] UserPutRequest request)
         {
+            var UserPutHandle = new UserPutHandle(request, _context, _configuration);
+            return await UserPutHandle.Handle();
         }
 
-        // DELETE api/<UserController>/5
         [HttpDelete]
         public async Task<ActionResult> Delete([FromBody] UserDeleteRequest request)
         {

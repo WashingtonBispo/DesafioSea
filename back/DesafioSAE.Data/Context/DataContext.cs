@@ -17,15 +17,17 @@ namespace DesafioSEA.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=DesafioSEA;Username=postgres;Password=");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=DesafioSEA;Username=postgres;Password=Big_Hurricane81");
 
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserEntity>(new UserMap().Configure);
+            modelBuilder.Entity<StoryEntity>(new StoryMap().Configure);
         }
 
         public DbSet<UserEntity> User { get; set; }
+        public DbSet<StoryEntity> Story { get; set; }
     }
 }
