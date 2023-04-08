@@ -20,18 +20,13 @@ namespace DesafioSAE.Controllers
             _context = context;
             _configuration = configuration;
         }
-        // GET: api/<UserController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
 
         // GET api/<UserController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet]
+        public async Task<UserResponse> Get([FromQuery] UserGetRequest request)
         {
-            return "value";
+            var UserGetHandle = new UserGetHandle(request, _context, _configuration);
+            return await UserGetHandle.Handle();
         }
 
         [HttpPost]
@@ -48,9 +43,11 @@ namespace DesafioSAE.Controllers
         }
 
         // DELETE api/<UserController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete]
+        public async Task<ActionResult> Delete([FromBody] UserDeleteRequest request)
         {
+            var UserDeleteHandle = new UserDeleteHandle(request, _context, _configuration);
+            return await UserDeleteHandle.Handle();
         }
     }
 }

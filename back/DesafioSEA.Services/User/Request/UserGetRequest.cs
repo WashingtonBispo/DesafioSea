@@ -8,17 +8,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DesafioSEA.Service.User.Request
 {
-    public class UserPostRequest
+    public class UserGetRequest
     {
+        [FromQuery]
         [Required]
-        [FromBody]
         public string Email { get; set; }
 
+        [FromQuery]
         [Required]
-        [FromBody]
         public string Password { get; set; }
-        [Required]
-        [FromBody]
-        public string Name { get; set; }
     }
 }

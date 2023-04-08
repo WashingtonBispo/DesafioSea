@@ -9,16 +9,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DesafioSEA.Service.User.Handle
 {
-    public class UserPostHandle
+    public class UserDeleteHandle
     {
-        UserPostRequest _request { get; set; }
+        UserDeleteRequest _request { get; set; }
         DataContext _context { get; set; }
         IConfiguration _configuration { get; set; }
 
-        public UserPostHandle(UserPostRequest request, DataContext context, IConfiguration configuration)
+        public UserDeleteHandle(UserDeleteRequest request, DataContext context, IConfiguration configuration)
         {
             _request = request;
             _context = context;
@@ -27,24 +28,21 @@ namespace DesafioSEA.Service.User.Handle
             _request.Email = _request.Email.ToLower();
         }
 
-        public async Task<UserResponse> Handle()
+        public async Task<ActionResult> Handle()
         {
-            Auth.ValidateUserInfor(_request.Email, _request.Password);
-
-            var user = new UserEntity
+            try
             {
-                Email = _request.Email,
-                Name = _request.Name,
-                Password = Auth.PasswordCrypt(_request.Password)
-            };
+                var user = _context.User.FirstOrDefault(x => x.Password == Auth.PasswordCrypt(_request.Password) && x.Email == _request.Email);
 
-            await _context.User.AddAsync(user);
+                _context.User.Remove(user);
+                await _context.SaveChangesAsync();
+                return new StatusCodeResult(200);
+            }
+            catch
+            {
+                return new StatusCodeResult(400);
+            }
 
-            await _context.SaveChangesAsync();
-
-            var JWT = Auth.GenerateJWTToUser(user, _configuration);
-
-            return new UserResponse { JWT = JWT };
         }
     }
 }

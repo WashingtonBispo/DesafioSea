@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 
 namespace DesafioSEA.Service.User.Handle
 {
-    public class UserPostHandle
+    public class UserGetHandle
     {
-        UserPostRequest _request { get; set; }
+        UserGetRequest _request { get; set; }
         DataContext _context { get; set; }
         IConfiguration _configuration { get; set; }
 
-        public UserPostHandle(UserPostRequest request, DataContext context, IConfiguration configuration)
+        public UserGetHandle(UserGetRequest request, DataContext context, IConfiguration configuration)
         {
             _request = request;
             _context = context;
@@ -29,18 +29,8 @@ namespace DesafioSEA.Service.User.Handle
 
         public async Task<UserResponse> Handle()
         {
-            Auth.ValidateUserInfor(_request.Email, _request.Password);
 
-            var user = new UserEntity
-            {
-                Email = _request.Email,
-                Name = _request.Name,
-                Password = Auth.PasswordCrypt(_request.Password)
-            };
-
-            await _context.User.AddAsync(user);
-
-            await _context.SaveChangesAsync();
+            var user = _context.User.FirstOrDefault(x => x.Password == Auth.PasswordCrypt(_request.Password) && x.Email == _request.Email);
 
             var JWT = Auth.GenerateJWTToUser(user, _configuration);
 
