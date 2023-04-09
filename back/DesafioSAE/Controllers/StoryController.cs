@@ -2,6 +2,7 @@
 using DesafioSEA.Service.Story.Request;
 using Microsoft.AspNetCore.Mvc;
 using DesafioSEA.Service.Story.Handle;
+using DesafioSEA.Service.Story.Response;
 
 namespace DesafioSAE.Controllers
 {
@@ -20,12 +21,31 @@ namespace DesafioSAE.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult> Create([FromBody] StoryPostRequest request)
+        public async Task<ActionResult> Post([FromBody] StoryPostRequest request)
         {
             var StoryPostHandle = new StoryPostHandle(request, _context, _configuration);
             return await StoryPostHandle.Handle();
         }
 
+        [HttpGet]
+        public async Task<List<StoryGetResponse>> Get([FromQuery] StoryGetEmailRequest request)
+        {
+            var StoryGetEmailHandle = new StoryGetEmailHandle(request, _context, _configuration);
+            return await StoryGetEmailHandle.Handle();
+        }
 
+        [HttpDelete]
+        public async Task<ActionResult> Delete([FromQuery] StoryDeleteRequest request)
+        {
+            var StoryDeleteHandle = new StoryDeleteHandle(request, _context, _configuration);
+            return await StoryDeleteHandle.Handle();
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Put([FromBody] StoryPutLikeRequest request)
+        {
+            var StoryPutLikeHandle = new StoryPutLikeHandle(request, _context, _configuration);
+            return await StoryPutLikeHandle.Handle();
+        }
     }
 }

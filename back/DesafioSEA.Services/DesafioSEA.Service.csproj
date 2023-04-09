@@ -16,8 +16,4 @@
     <ProjectReference Include="..\DesafioSEA.Domain\DesafioSEA.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Story\Response\" />
-  </ItemGroup>
-
 </Project>
