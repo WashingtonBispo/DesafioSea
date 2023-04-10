@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from "react-redux";
+import authAction from "../../store/action/auth";
 
 import { 
     Input, 
@@ -16,24 +18,47 @@ import {
     ModalCloseButton,
   } from '@chakra-ui/react'
 
+  import { api } from "../../services/api";
+
 const SignUpModal = (props) => {
   const isOpen = props.isOpen;
   const onClose = props.onClose;
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [name, setName] = React.useState('');
-  
-  const handleChangeEmail = (event) => setEmail(event.target.value);
+  const dispatch = useDispatch();
 
+  const handleChangeEmail = (event) => setEmail(event.target.value);
   const handleChangePassword = (event) => setPassword(event.target.value);
+  const handleChangeName = (event) => setName(event.target.value);
 
   const handleSubmitForms = () => {
     const CreateUser = async () => {
-        try userData = {
-            
+        try{
+            const userData = {
+                name,
+                email,
+                password
+            }
+
+            const responseData = await api.post("User", userData);
+            const token = responseData.data.jwt;
+    
+            dispatch(
+              authAction.logIn({
+                token
+              })
+            );
+
+        }
+        catch(err){
+            console.log(err);
         }
     }
-  }
+
+    CreateUser();
+    onClose();
+}
 
 
   return (
@@ -56,24 +81,24 @@ const SignUpModal = (props) => {
                     <Text mb='8px'>Senha</Text>
                     <InputGroup size='md'>
                         <Input
-                        value={email}
-                        onChange={handleChangeEmail}
+                        value={password}
+                        onChange={handleChangePassword}
                         pr='4.5rem'
-                        type='text'
+                        type='password'
                         />
                     </InputGroup>
                     <Text mb='8px'>Nome</Text>
                     <InputGroup size='md'>
                         <Input
                         value={name}
-                        onChange={handleChangeEmail}
+                        onChange={handleChangeName}
                         pr='4.5rem'
                         type='text'
                         />
                     </InputGroup>
             </ModalBody>
             <ModalFooter>
-            <Button colorScheme='green' mr={3} onClick={onClose}>
+            <Button colorScheme='green' mr={3} onClick={handleSubmitForms}>
                 Entrar
             </Button>
             </ModalFooter>

@@ -45,26 +45,7 @@ const Home = () => {
                 </Title>
                 <Landing
                     text= "fui botar catchup na batata frita mas esqueci de sacudir ai saiu agua primeiro">
-                </Landing>
-            <Story
-            text = "fui botar catchup na batata frita mas esqueci de sacudir ai saiu agua primeiro"
-            likes = "13"
-            ></Story>
-
-<Button onClick={onSignOpen}>Logar</Button>
-<Button onClick={onOpen}>Cadastrar</Button>
-
-
-      <SignInModal
-        isOpen = {isSignOpen}
-        onClose = {onSignClose}>
-      </SignInModal>
-
-      <SignUpModal
-        isOpen = {isOpen}
-        onClose = {onClose}>
-      </SignUpModal>
-      
+                </Landing>  
             </BodyContainer>
         </>
     )

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StoryContainer = styled.div`
   border-radius: 8px;
   margin: 16px;
-  max-width: 500px;
+  width: 500px;
   border: 2px solid rgba(0,0,0,.16);
 `;
 

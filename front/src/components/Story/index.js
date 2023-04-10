@@ -12,9 +12,9 @@ import {
 } from './styles';
 
 const Story = (props) => {
-  const text = props.text;
+  const story = props.story;
   const status = props.status;
-  const likes = props.likes;
+
 
   const Like = (e) => {
     alert("nha")
@@ -32,12 +32,12 @@ const Story = (props) => {
           marginBottom="8px"
           fontWeight="bold"
           >
-          {text}
+          {story.storyText}
         </p>
       </StoryArea>
       <InfoArea>
         <LikesText>
-            {likes} likes
+            {story.likes.length} likes
         </LikesText>
         <button onClick={Like}>
             auau

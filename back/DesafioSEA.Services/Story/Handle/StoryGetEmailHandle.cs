@@ -21,7 +21,8 @@ namespace DesafioSEA.Service.Story.Handle
             _context = context;
             _configuration = configuration;
 
-            _request.Email = _request.Email.ToLower();
+            if(_request.Email != null)
+                _request.Email = _request.Email.ToLower();
         }
 
         public async Task<List<StoryGetResponse>> Handle()
@@ -37,7 +38,7 @@ namespace DesafioSEA.Service.Story.Handle
                 }
                 else
                 {
-                    Stories = _context.Story.ToList();
+                    Stories = _context.Story.Include(x => x.Author).Include(x => x.Likes).ToList();
                 }
 
                 return Stories.Select(x => new StoryGetResponse(x)).ToList();

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Modal }  from '@chakra-ui/react'
+import { ModalContent }  from '@chakra-ui/react'
 
 export const BodyContainer = styled.div`
   width: 100%;
@@ -13,7 +13,7 @@ export const Title = styled.h1`
     font-size: 40px; 
 `;
 
-export const MyModal = styled(Modal)`
+export const MyModal = styled(ModalContent)`
     background-color: #fffaaf;
     border: 2px solid rgba(0,0,0,.16);
     border-radius: 8px;
