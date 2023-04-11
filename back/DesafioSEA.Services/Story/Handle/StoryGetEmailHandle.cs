@@ -34,11 +34,11 @@ namespace DesafioSEA.Service.Story.Handle
 
                 if (!string.IsNullOrEmpty(_request.Email))
                 {
-                    Stories = _context.Story.Include(x=> x.Author).Include(x=>x.Likes).Where(x => x.Author.Email == _request.Email).ToList();
+                    Stories = _context.Story.Include(x => x.Likes).Include(a => a.Author).Where(x => x.Author.Email == _request.Email).ToList();
                 }
                 else
                 {
-                    Stories = _context.Story.Include(x => x.Author).Include(x => x.Likes).ToList();
+                    Stories = _context.Story.Include(x=>x.Likes).Include(a => a.Author).ToList();
                 }
 
                 return Stories.Select(x => new StoryGetResponse(x)).ToList();

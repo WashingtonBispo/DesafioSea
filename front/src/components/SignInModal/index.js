@@ -48,6 +48,7 @@ const SignUpModal = (props) => {
                 token
               })
             );
+            window.location.reload(false);
 
         }
         catch(err){
@@ -88,7 +89,7 @@ const SignUpModal = (props) => {
             </ModalBody>
             <ModalFooter>
             <Button colorScheme='green' mr={3} onClick={handleSubmitForms}>
-                Cadastrar
+                Entrar
             </Button>
             </ModalFooter>
         </ModalContent>

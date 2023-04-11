@@ -14,13 +14,13 @@ namespace DesafioSEA.Service.Story.Response
         {
             IdStory = story.IdStory;
             StoryText = story.StoryText;
-            Author = story.Author.Name;
-            Likes = story.Likes;
+            Author = story.Author.Email;
+            Likes = story.Likes.Select(x => x.Email);
         }
 
         public string IdStory { get; set; }
         public string StoryText { get; set; }
         public string Author { get; set; }
-        public ICollection<UserEntity> Likes { get; set; }
+        public IEnumerable<string> Likes { get; set; }
     }
 }

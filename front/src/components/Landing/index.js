@@ -2,9 +2,9 @@ import React, { useCallback, useEffect, useState } from 'react';
 import jwt_decode from 'jwt-decode';
 import { useSelector } from 'react-redux';
 import { useToast } from '@chakra-ui/react'
-
+import Stories from '../Stories';
 import { api } from "../../services/api";
-import Story from "../Story"
+
 import {
     LandingContainer,
     CreateContainer,
@@ -13,7 +13,6 @@ import {
     WriteBoard,
     SplitLine,
     MyButton,
-    StoriesContainer
 } from './styles';
 
 const Landing = (props) => {
@@ -46,6 +45,8 @@ const Landing = (props) => {
             }
 
             await api.post("Story", StoryData);
+            window.location.reload(false);
+            
         }
         catch(err){
             console.log(err);
@@ -61,7 +62,6 @@ const Landing = (props) => {
 
           const responseData = await api.get("Story");
           setStories(responseData.data);
-            console.log(stories);
         } catch (e)
         {
           showErrorToast("O Servidor está meio sem graça hoje!");
@@ -70,9 +70,9 @@ const Landing = (props) => {
 
 useEffect(() => {
   getStories();
-  const decoded = jwt_decode(token);
-  
-  setEmail(decoded.email);
+  const decoded = !!token ? jwt_decode(token) : null;
+  if(decoded)
+    setEmail(decoded.email);
 
 }, [getStories, token]);
 
@@ -111,16 +111,9 @@ function changeBackground(e, color) {
                     <MyButton onClick={handleNewStory} onMouseOver={(e) => changeBackground(e, "#c7dc75")} onMouseOut={(e) => changeBackground(e, "transparent")}>Enviar</MyButton>
         </CreateContainer>
       </LandingContainer>
-      <StoriesContainer>
-        {stories.map((story) =>{
-            return ( 
-                <Story
-                    story = {story}
-                ></Story>
-            )
-        }
-        )}
-      </StoriesContainer>
+        <Stories>
+
+        </Stories>
     </>
   );
 };

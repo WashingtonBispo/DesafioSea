@@ -49,7 +49,7 @@ const SignUpModal = (props) => {
                 token
               })
             );
-
+            window.location.reload(false);
         }
         catch(err){
             console.log(err);

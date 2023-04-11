@@ -22,21 +22,9 @@ import {
     ModalCloseButton,
   } from '@chakra-ui/react'
 
-import Story from '../../components/Story'
 import Landing from "../../components/Landing";
-import SignUpModal from "../../components/SignUpModal";
-import SignInModal from "../../components/SignInModal"
 
 const Home = () => {
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const { isOpen:isSignOpen, 
-            onOpen: onSignOpen, 
-            onClose: onSignClose } = useDisclosure()
-
-
-
     return (
         <>
             <BodyContainer>

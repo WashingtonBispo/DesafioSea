@@ -67,9 +67,3 @@ export const MyButton = styled.button`
     box-shadow: rgba(0,0,0,.2)0 1px 2px 0;
     border-radius: 4px;
 `;
-
-export const StoriesContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
